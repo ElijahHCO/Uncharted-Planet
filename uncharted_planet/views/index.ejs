@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index: Exobiology</title>
+</head>
+<body>
+     <% if(scientist.length === 0) { %>
+        <h2>No scientist entered</h2>
+        <a href="/scientist/new">Add a scientist</a>
+    <% } else { %>
+    <ul class="scientist">
+        <% scientist.forEach((scientist)=>{ %>
+            <li><%= scientist.name %> is a  <%=scientist.description%></li>
+        <% }) %>
+    </ul>
+    <% } %>
+</body>
+</html>
